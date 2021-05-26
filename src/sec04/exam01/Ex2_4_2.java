@@ -12,12 +12,29 @@ public class Ex2_4_2 {
 		
 		System.out.println("두번쨰 수");
 		String strNum2 = sc.nextLine();
+
+		System.out.println(" + - * / 중 연산자 1개를 넣으세요");
+		String strOp = sc.nextLine();
 		
 		int num1 = Integer.parseInt(strNum1);
 		int num2 = Integer.parseInt(strNum2);
-		int result = num1 + num2;
-		System.out.println("덧셈결과= "+result);		
+					
+		int result = 0;
+		switch (strOp) {
+		case "+":
+			result = num1 + num2;
+			break;
+		case "-":
+			result = num1 - num2;
+			break;
+		case "*":
+			result = num1 * num2;
+			break;
+		case "/":
+			result = num1 + num2;
+			break;			
+		}		
 		
+		System.out.println("num1 "+strOp+" num2= "+result);
 	}
-
 }
